@@ -1,0 +1,36 @@
+<div style="text-align:center">
+    <button style="cursor:pointer" (click)="irAgregar()"> +</button>
+
+
+
+</div>
+
+
+
+<div class="box">
+    <!--En esta caja vamos a ir mostrando cada uno de los items de personas-->
+    <div class="item" *ngFor="let persona of personas">
+
+        <ul>
+
+            <li>
+                <a [routerLink]="['/personas', persona.idPersona]">
+          {{persona.nombre}}
+
+        </a>
+
+            </li>
+
+        </ul>
+
+
+
+
+
+    </div>
+    <!-- ngfor es para Piterar cada uno de los elementos-->
+</div>
+
+
+<!--incrusta el componente de formulario-->
+<router-outlet></router-outlet>
